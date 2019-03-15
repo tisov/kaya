@@ -1,0 +1,42 @@
+=bg-gray
+   background-color: #e1e1e1
+
+=media($orientation, $props)
+   @if ($orientation == xs)
+      $orientation: 0
+   @else if($orientation == sm)
+      $orientation: 576px
+   @else if($orientation == md)
+      $orientation: 768px
+   @else if($orientation == lg)
+      $orientation: 992px
+   @else if($orientation == xl)
+      $orientation: 1200px
+   @media screen and (max-width: $orientation)
+      @each $key, $value in $props
+      #{$key}: $value
+
+
+=mediaQ($orientation)
+   @if ($orientation == xs)
+      $orientation: 0
+   @else if($orientation == sm)
+      $orientation: 576px
+   @else if($orientation == md)
+      $orientation: 768px
+   @else if($orientation == lg)
+      $orientation: 992px
+   @else if($orientation == xl)
+      $orientation: 1200px
+
+   @media screen and (max-width: $orientation)
+      @content
+
+=animate
+   transition: 0.3s
+
+=transition
+   transition: 0.3s
+
+
+   

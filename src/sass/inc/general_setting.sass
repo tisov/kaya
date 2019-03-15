@@ -1,0 +1,98 @@
+// general setting
+html
+   font-size: 14px
+   +mediaQ(xl)
+      font-size: 13px
+   +mediaQ(lg)
+      font-size: 12px
+   +mediaQ(md)
+      font-size: 11px
+   +mediaQ(sm)
+      font-size: 10px
+   
+body
+   font-size: 14px
+   font-weight: 400
+   font-family: 'open sans', sans-serif
+   color: #404040
+   line-height: 24px
+
+*,
+*::before,
+*::after
+   box-sizing: border-box
+   margin: 0
+   padding: 0
+
+ul
+   list-style: none
+   margin: 0
+
+a,
+span
+   display: inline-block
+
+a
+   transition: 0.3s
+   color: inherit
+   &:hover
+      text-decoration: none
+      color: $primary 
+
+h1, h2, h3, h4, h5, h6
+   margin: 0
+
+p
+   color: #404040
+   font-size: 14px
+   margin: 0
+
+img
+   vertical-align: middle
+   max-width: 100%
+   +transition
+   &:focus
+      outline: none
+
+button,
+input,
+textarea
+   border: none
+   outline: none
+   border-radius: 0
+   &:focus
+      outline: none
+
+button
+   cursor: pointer
+   &:focus
+      outline: none
+
+
+
+// classes
+.container
+   max-width: 1140px
+
+
+
+.bg-gray
+   background-color: #e1e1e1
+
+.input
+   height: $input-height
+
+.button
+   height: $input-height
+
+.static
+   position: static !important
+
+.slick-slide:focus
+   outline: none
+
+.uppercase
+   text-transform: uppercase
+
+.table
+   white-space: nowrap

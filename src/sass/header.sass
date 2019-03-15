@@ -1,0 +1,619 @@
+// header
+
+
+// header top area
+.header-top
+   
+   padding: 12px
+   padding: 6px 0
+   color: #444444
+   font-size: 12px
+   +bg-gray
+   ul > li
+      display: inline-block
+      a:hover
+         color: $primary
+   .h-top-contacts
+      //+media(md, (text-align: center, margin-bottom: 5px))
+      +mediaQ(md)
+         text-align: center
+         margin-bottom: 5px
+      li:not(:last-child)
+         margin-right: 20px
+         padding-right: 20px
+   .account-links
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      //+media(md, (justify-content: center))
+      +mediaQ(md)
+         justify-content: center
+      > li:not(:last-child)
+         margin-right: 30px
+         //+media(md, (margin-right: 15px))
+         +mediaQ(md)
+            margin-right: 15px
+      .acc-link-item
+         .dropdown-menu
+            font-size: 12px
+            li
+               display: block
+               a
+                  display: block
+                  color: #444
+                  text-transform: capitalize
+                  padding: 5px 15px
+                  &:hover
+                     color: $primary
+                     +bg-gray
+
+
+
+
+// header middle
+.header-middle
+   padding: 20px 0
+   .logo-header
+      //+media(lg, (margin-bottom: 10px))
+      +mediaQ(lg)
+         margin-bottom: 10px
+   .shipping-info
+      display: flex
+      justify-content: space-between
+      margin-bottom: 20px
+      .shipping-info-item
+         display: flex
+         align-items: center
+         .sii-icon
+            display: flex
+            align-items: center
+            justify-content: center
+            height: 50px
+            width: 50px
+            border: 2px solid
+            border-radius: 50%
+            margin-right: 10px
+            font-size: 24px
+            color: $primary
+         .sii-content
+            h5
+               font-size: 20px
+               font-weight: 600
+               text-transform: uppercase
+               color: #444444
+            span
+               font-size: 13px
+
+.searchform-minicart
+   display: flex
+   .search-form
+      display: flex
+      flex-basis: 80%
+      margin-right: 20px
+      +mediaQ(sm) 
+         margin-right: 10px
+      .sf_input
+         height: $input-height
+         border: 2px solid $dark
+         border-right: none
+         flex-grow: 2
+         padding: 0 0.5rem
+      .sf_button
+         height: $input-height
+         background-color: $dark
+         width: 56px
+         font-size: 18px
+         color: #fff
+         &:hover
+            background-color: $primary
+   .minicart
+      flex-basis: 20%
+
+.minicart
+   display: flex 
+   position: relative
+   +mediaQ(sm) 
+      justify-content: flex-end  
+   .m__button,
+   .m__total
+      background-color: $dark
+      color: #fff
+      height: $input-height
+      +animate
+      &:hover
+         background-color: $primary
+   .m__button
+      margin-right: 5px
+      width: $input-height
+      button
+         width: 100%
+         height: 100%
+         background-color: transparent
+         color: #fff
+         font-size: 18px
+         position: relative
+         &:focus
+            outline: none
+         &:hover .items-count
+            background-color: #fff
+            color: $primary
+         .items-count
+            position: absolute
+            top: 7px
+            right: 7px
+            width: 16px
+            height: 16px
+            background-color: $primary
+            color: #fff
+            border-radius: 50% 
+            font-size: 11px
+            display: flex
+            justify-content: center
+            align-items: center
+            +animate
+   .m__total
+      flex-grow: 2
+      display: flex
+      flex-direction: column
+      align-items: center
+      +mediaQ(sm)
+         display: none
+      .title
+         font-size: 12px
+         text-transform: uppercase
+      .total-price
+         font-size: 20px
+         font-weight: 600
+
+// minicart menu
+.minicart-menu
+   display: none
+   border: none
+   padding: 0
+   .mm__wrap
+      display: flex
+      flex-wrap: wrap
+      width: 300px
+      padding: 20px
+      box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.1)
+      border: none
+   .mm__product-list
+      width: 100%
+   .mm__total
+      width: 100%
+      display: flex
+      justify-content: space-between
+      font-size: 14px
+      color: #444;
+      font-weight: 600
+      margin-bottom: 20px
+      .title
+         text-transform: uppercase
+   .mm__action
+      width: 100%
+      .checkout-btn
+         background-color: $dark
+         color: #ffffff
+         display: block
+         font-size: 14px
+         +animate
+         &:hover
+            background-color: $primary 
+      
+// minicart product
+.m-product
+   display: flex
+   align-items: flex-start
+   width: 100%
+   margin-bottom: 20px
+   &__img
+      margin-right: 15px
+      max-width: 60px
+      border: 1px solid #e5e5e5
+   &__info
+      flex-grow: 1
+      margin-right: 5px
+      .title
+         font-size: 14px
+         display: block
+         line-height: 1.2
+         text-transform: capitalize
+         &:hover a
+            color: $primary
+      .price
+         font-size: 16px
+         margin-top: 10px
+         color: $primary
+   &__remove
+      font-size: 18px
+      line-height: 1.2
+      cursor: pointer
+      margin-left: auto
+      
+
+// header bottom area
+.header-bottom
+   border-bottom: 3px solid $primary
+   font-size: 14px
+
+// categories menu
+.categories
+   position: relative
+   .drop-toggle
+      line-height: 45px
+      color: #ffffff
+      background-color: $primary
+      font-weight: 600
+      padding-left: 10px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: 100%
+      text-transform: uppercase
+      &:focus
+         outline: none
+      .icon
+         height: 100%
+         width: 50px
+         background-color: #b8242a
+         color: #444
+         font-size: 14px
+         .fas
+            width: 18px
+            height: 18px
+            color: $primary
+            background-color: #fff
+            line-height: 18px
+            text-align: center
+            border-radius: 50%
+   // .dropdown-menu
+   //    border-radius: initial
+   //    width: 100%
+   //    padding: 0
+   //    border: none
+      // box-shadow: 0 2px 12px 2px rgba(0,0,0,0.1)
+   .category-menu
+      display: none
+      position: absolute
+      z-index: 140
+      background-color: #fff
+      width: 100%
+      box-shadow: 0 2px 12px 2px rgba(0,0,0,0.1)
+      +mediaQ(lg)
+         display: none
+      > ul
+         > li
+            position: relative
+            border-bottom: 1px solid rgba(0,0,0,0.05)
+            &:hover > a
+               background-color: $primary
+               color: #fff
+            &:hover ._dropdown-menu
+               visibility: visible
+               opacity: 1
+               top: 0
+            > a
+               display: flex
+               justify-content: flex-start
+               align-items: center
+               padding: 10px 25px
+               width: 100%
+               text-transform: uppercase
+               font-size: 14px
+               line-height: 30px
+               color: #404040
+               i
+                  margin-right: 10px
+               i:nth-of-type(2)
+                  margin-right: 0
+                  margin-left: auto
+            &:last-child
+               border-bottom: none
+            ._dropdown-menu
+               display: flex
+               visibility: hidden
+               opacity: 0
+               position: absolute
+               top: 100%
+               left: calc(100% + 1px)
+               box-shadow: 0 2px 12px 2px rgba(0,0,0,0.1)
+               width: 800px
+               padding: 20px
+               z-index: 150
+               background-color: #fff
+               +transition
+               +mediaQ(xl)
+                  padding: 10px
+                  width: 700px 
+               .column
+                  flex-basis: 25%
+                  .title
+                     font-size: 16px
+                     font-weight: 600
+                     color: #444444
+                     text-transform: uppercase
+                     margin-bottom: 20px
+                  ul li a
+                     display: block
+                     font-size: 14px
+                     color: #606060
+                     line-height: 30px
+                     text-transform: capitalize
+                     &:hover
+                        color: $primary
+   // categories mobile
+   &.mobile
+      .category-menu
+         max-height: 300px 
+         overflow-y: auto
+         > ul > li a
+            padding-left: 15px
+      ._dropdown 
+         > a 
+            position: relative
+            i:nth-of-type(2)
+               position: absolute
+               right: 15px
+               top: 0
+               height: 100%
+               font-size: 20px
+               display: flex
+               align-items: center
+               justify-content: center
+               width: 45px
+               background-color: $primary
+               color: #fff
+            i.rotate::before
+               +transition
+               transform: rotateZ(90deg)
+         ._dropdown-menu
+            display: none 
+            margin: 0 40px
+            position: static
+            visibility: visible
+            opacity: 1
+            box-shadow: none
+            width: auto
+            border-top: 1px solid rgba(0,0,0,0.05)
+            padding: 0 !important
+            > li a
+               display: block 
+               position: relative
+               padding: 10px 0
+               margin-bottom: 0 !important
+               font-size: 14px !important
+               font-weight: normal !important
+               text-transform: capitalize !important
+               i
+                  position: absolute
+                  right: 0
+                  top: 0
+                  height: 100%
+                  width: 40px
+                  font-size: 18px
+                  background-color: $primary
+                  color: #ffffff
+                  display: flex
+                  align-items: center
+                  justify-content: center
+            > li > ul
+               margin: 0 10px
+               display: none
+            > li
+               border-bottom: 1px solid rgba(0,0,0,0.05)
+            > li > ul > li:not(:last-child)
+               border-bottom: 1px solid rgba(0,0,0,0.05)
+            > li > ul > li:first-child
+               border-top: 1px solid rgba(0,0,0,0.05)
+               
+
+
+.nav-menu
+   width: 100%
+   border-top: 1px solid 
+   border-right: 1px solid 
+   border-color: #444
+   +mediaQ(lg)
+      display: none
+   > ul
+      display: flex
+      position: relative
+      li:hover > .drop-menu
+         display: flex
+      > li
+         position: relative
+         border-right: 1px solid #444
+         &.active > a
+            color: $primary
+         > a
+            line-height: 44px
+            padding: 0 25px
+            font-weight: 700
+            text-transform: uppercase
+            .fas
+               padding: 0 3px
+         .drop-menu
+            display: none
+            border-top: 3px solid $primary
+            flex-wrap: wrap
+            width: 220px
+            position: absolute
+            top: 100%
+            left: 0
+            background-color: #fff
+            padding: 20px 0
+            z-index: 100
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2)
+            .drop-menu
+               top: 0
+               left: 100%
+               z-index: 110
+            a
+               text-transform: capitalize
+               padding: 5px 25px
+               width: 100%
+               display: flex
+               justify-content: space-between
+               .fas
+                  transform: translate(0, 2px)
+            li ul > a 
+               font-weight: 600
+               font-size: 15px
+            li 
+               width: 100%
+               position: relative
+         .drop-menu--mega
+            width: 100%
+            > li
+               flex-basis: 25%
+               ul li.title
+                  font-weight: 600
+
+// mobile menu
+.mobile-menu-container
+   position: relative
+   height: 45px
+   .mobile-nav
+      height: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      .title
+         font-weight: 500
+         font-size: 18px
+         text-transform: uppercase
+      .mobile-menu-btn
+         font-size: 30px
+         color: $dark 
+
+.mobile-nav-menu
+   display: none
+   background-color: #f8f8f8
+   > ul
+      li
+         border-bottom: 1px solid #ccc
+         &:last-child
+            border-bottom: none
+         a
+            display: block
+            padding: 10px 20px
+            position: relative
+            a
+               padding-left: 10px
+               padding-right: 10px
+            span
+               position: absolute
+               right: 0
+               top: 0
+               color: #ffffff
+               font-size: 16px
+               display: flex
+               align-items: center
+               justify-content: center
+               height: 100%
+               width: 45px
+               background-color: $dark
+      > li
+         position: relative
+         > a
+            text-transform: uppercase
+         a i
+            display: none
+         .drop-menu
+            display: none
+            margin: 0 30px 
+            li:first-child
+               margin-top: 1px
+            a
+               padding-left: 0
+               padding-right: 0
+               text-transform: capitalize
+            
+.main-slider
+   margin-top: 30px
+   margin-left: 30px
+   margin-bottom: 5rem
+   +mediaQ(lg)
+      margin-left: 0
+   .slick-current .left-content 
+      img:nth-of-type(1)
+         animation-name: fadeInLeft
+         animation-duration: 2s
+      img:nth-of-type(2)
+         animation-name: fadeInLeft
+         animation-duration: 1.5s
+      img:nth-of-type(3)
+         animation-name: fadeInLeft
+         animation-duration: 1s
+   .slick-current .right-content
+      h1
+         animation-name: fadeInUp
+         animation-duration: 1s
+      p
+         animation-name: fadeInUp
+         animation-duration: 2s
+   &__item
+      background-repeat: no-repeat
+      background-position: center 
+      background-size: cover
+      height: 425px
+      +mediaQ(sm)
+         height: 250px
+   &__inner
+      display: flex
+      height: 100%
+      .left-content
+         flex-basis: 40%
+         display: flex
+         flex-direction: column
+         align-items: flex-start
+         justify-content: flex-end
+      .right-content
+         flex-basis: 60%
+         display: flex
+         flex-direction: column
+         align-items: center
+         justify-content: flex-end
+         text-align: center
+         .banner
+            max-width: 180px
+            +mediaQ(sm)
+               max-width: 80px
+         h1
+            font-size: 3rem
+            +mediaQ(sm)
+               font-size: 1.5rem
+            color: #ffffff
+            font-weight: 700
+            margin-bottom: 10px
+            text-transform: capitalize
+         p
+            color: #fff
+            font-size: 14px
+            line-height: 14px
+            padding-bottom: 30px
+            font-weight: 700
+            +mediaQ(sm)
+               font-weight: normal
+            text-transform: capitalize
+
+// slick dots
+.slick-dots--rounded
+   display: flex
+   align-items: center
+   justify-content: center
+   position: absolute
+   bottom: 10px
+   left: 50%
+   transform: translate(-50%, 0)
+   button
+      text-indent: -5000px
+      width: 12px
+      height: 12px
+      background-color: #ccc
+      border-radius: 10px
+      margin-right: 10px
+      +transition
+   .slick-active button
+      background-color: $primary
+      width: 30px

@@ -1,0 +1,38 @@
+.main-section
+   .container
+      >.row
+         .col-lg-9
+            padding-left: 30px
+            +mediaQ(lg)
+               padding-left: 0
+
+.brand-list
+   .brand-item
+      display: flex
+      justify-content: center
+      border: 1px solid #e5e5e5
+   &.slider-padding
+      .slick-list
+         margin: 0 -15px
+      .slick-slide
+         margin: 0 15px
+
+
+.newsletter-wrap
+   display: flex
+   align-items: center
+   justify-content: space-between
+   +mediaQ(md)
+      flex-wrap: wrap
+      justify-content: center
+   .newsletter
+      flex-basis: 48%
+      +mediaQ(md)
+         flex-basis: 100%
+         display: flex
+         justify-content: center
+         margin-bottom: 15px
+   .subscribe-form-wrap
+      flex-basis: 48%
+      +mediaQ(md)
+         flex-basis: 100%
